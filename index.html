@@ -621,8 +621,8 @@
     const mobileMenu = document.getElementById('mobile-menu');
     const mobileMenuItems = mobileMenu.querySelectorAll('a'); // Ambil semua item menu mobile
 
-    // Fungsi untuk menutup menu mobile
-    function closeMobileMenu() {
+    // Fungsi untuk menutup menu mobile dan melakukan scroll ke section yang sesuai
+    function closeMobileMenuAndScroll(targetId) {
       mobileMenu.style.opacity = '0'; // Mulai animasi fade out
       mobileMenu.style.transform = 'translateY(-20px)'; // Geser menu ke atas
 
@@ -630,18 +630,31 @@
       setTimeout(() => {
         mobileMenu.style.display = 'none'; // Sembunyikan menu mobile
         mobileMenuButton.classList.remove('open'); // Hapus class 'open' dari tombol hamburger
+
+        // Scroll ke section yang sesuai
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          targetElement.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
       }, 500); // Sesuaikan waktu dengan durasi animasi CSS (0.5s)
     }
 
     // Tambahkan event listener ke setiap item menu mobile
     mobileMenuItems.forEach(item => {
-      item.addEventListener('click', closeMobileMenu);
+      item.addEventListener('click', function (e) {
+        e.preventDefault(); // Mencegah perilaku default
+        const targetId = this.getAttribute('href'); // Ambil ID target dari href
+        closeMobileMenuAndScroll(targetId); // Tutup menu dan scroll ke section
+      });
     });
 
     // Toggle menu mobile saat tombol hamburger diklik
     mobileMenuButton.addEventListener('click', () => {
       if (mobileMenu.style.display === 'block') {
-        closeMobileMenu(); // Tutup menu jika sudah terbuka
+        closeMobileMenuAndScroll(); // Tutup menu jika sudah terbuka
       } else {
         mobileMenu.style.display = 'block'; // Tampilkan menu
         setTimeout(() => {
