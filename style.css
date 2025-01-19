@@ -33,63 +33,69 @@ html {
   transform: translateY(0); /* Kembali ke posisi semula */
 }
 
+
 /* klik menu item nav akan nutup */
 
-/* Home */
-@keyframes fade-in {
-  from {
-      opacity: 0;
-  }
-  to {
-      opacity: 1;
-  }
+/* Animasi Paralax */
+/* Animasi Paralax */
+.parallax {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 
-@keyframes slide-in-down {
-  from {
-      transform: translateY(-50px);
-      opacity: 0;
-  }
-  to {
-      transform: translateY(0);
-      opacity: 1;
-  }
+.video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+  transform: translateY(0);
+  /* Initial position of video */
+  transition: transform 0.1s linear;
+  /* Smooth transition for scroll effect */
 }
 
-@keyframes slide-in-up {
-  from {
-      transform: translateY(50px);
-      opacity: 0;
+.video-element {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.text-center {
+  z-index: 10;
+}
+
+/* Animasi teks */
+.fadeInUp {
+  animation: fadeInUp 1.5s ease-out;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
   }
-  to {
-      transform: translateY(0);
-      opacity: 1;
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
-}
-
-@keyframes image-zoom {
-  from {
-      transform: scale(1);
-  }
-  to {
-      transform: scale(1.1);
-  }
-}
-
-.animate-fade-in {
-  animation: fade-in 2s ease-in-out;
-}
-
-.animate-slide-in-down {
-  animation: slide-in-down 1.5s ease-out;
-}
-
-.animate-slide-in-up {
-  animation: slide-in-up 1.5s ease-out;
-}
-
-.animate-image-zoom {
-  animation: image-zoom 15s ease-in-out infinite alternate;
 }
 
 /* Seection keindahan alam */

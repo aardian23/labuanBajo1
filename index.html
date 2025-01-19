@@ -7,6 +7,8 @@
   <title>Projects LabuanBajo</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="style.css">
+  <!-- Impor Charm font dari Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Charm&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
@@ -113,33 +115,31 @@
   <!-- Awal Home -->
   <!-- Awal Home -->
   <!-- Awal Home -->
-  <section class="relative bg-cover bg-center h-screen md:h-[90vh] sm:h-[80vh] animate-image-zoom"
-    style="background-image: url('image\ copy.jpg');">
-    <div class="absolute inset-0 bg-black bg-opacity-50"></div>
-    <div
-      class="relative z-10 flex flex-col items-center justify-center h-full text-center text-white animate-fade-in px-4">
-      <h1 class="text-3xl sm:text-4xl md:text-6xl font-bold mb-4 drop-shadow-md animate-slide-in-down">
-        Selamat Datang di <span class="text-blue-400">Labuan Bajo</span>
-      </h1>
-      <p class="text-base sm:text-lg md:text-2xl max-w-3xl mb-6 drop-shadow-md animate-slide-in-up">
-        Temukan keindahan alam yang luar biasa, pantai yang memukau, dan pengalaman tak terlupakan di surga Indonesia.
-      </p>
-      <div class="flex flex-wrap gap-4 justify-center">
-        <a href="#explore"
-          class="px-6 py-3 bg-blue-500 hover:bg-blue-600 rounded-lg text-white font-semibold shadow-lg transform hover:scale-105 transition-all duration-300">Jelajahi
-          Sekarang</a>
-        <a href="#about"
-          class="px-6 py-3 bg-transparent border border-white hover:bg-white hover:text-black rounded-lg font-semibold shadow-lg transform hover:-translate-y-1 transition-all duration-300">Pelajari
-          Lebih Lanjut</a>
-      </div>
+  <section class="parallax">
+    <!-- Parallax efek -->
+    <div class="video-background">
+      <video autoplay muted loop class="video-element">
+        <source src="images/bghome.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
     </div>
-    <!-- Hiasan Dibawah Home warna -->
-    <div class="relative">
-      <div
-        class="absolute bottom-0 left-0 w-full h-10 bg-gradient-to-t from-blue-800 via-blue-600 to-transparent opacity-80 sm:h-8 md:h-12">
-      </div>
+    <div class="overlay"></div>
+    <div class="text-center text-white px-6 md:px-12 z-10">
+      <h1 class="text-4xl md:text-5xl font-extrabold leading-tight mb-4 fadeInUp">Selamat Datang di Website Kami
+      </h1>
+      <p class="text-lg md:text-2xl mb-6 fadeInUp">Kami membantu Anda mewujudkan solusi digital yang inovatif dan
+        efektif.</p>
+      <a href="#about"
+        class="bg-blue-800 text-white py-3 px-8 rounded-full text-xl hover:bg-indigo-500 transition duration-300 ease-in-out transform hover:scale-105 mt-4 fadeInUp">Pelajari
+        Lebih Lanjut</a>
     </div>
   </section>
+  <!-- Hiasan Dibawah Home warna -->
+  <div class="relative">
+    <div
+      class="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-t from-blue-800 via-blue-600 to-transparent opacity-70">
+    </div>
+  </div>
   <!-- Akhir Home -->
   <!-- Akhir Home -->
   <!-- Akhir Home -->
@@ -489,9 +489,9 @@
             class="bg-white text-gray-800 rounded-2xl shadow-2xl hover:shadow-lg hover:ring-4 hover:ring-blue-400 transition-all duration-300">
             <img src="images/f2.png" alt="Fauna 2" class="w-full h-48 object-cover rounded-t-2xl">
             <div class="p-6">
-              <h3 class="text-2xl font-semibold text-blue-600">Rusa Timor</h3>
-              <p class="text-gray-600 mt-4">Rusa Timor adalah salah satu hewan khas yang dapat ditemukan di Labuan Bajo,
-                terutama di Taman Nasional Komodo.</p>
+              <h3 class="text-2xl font-semibold text-blue-600">Pari Manta</h3>
+              <p class="text-gray-600 mt-4">Pari manta ikut mengendalikan kelimpahan populasi dan keanekaragaman
+                plankton serta turut berperan dalan mengatur siklus nutrisi</p>
             </div>
           </div>
 
@@ -499,7 +499,7 @@
             class="bg-white text-gray-800 rounded-2xl shadow-2xl hover:shadow-lg hover:ring-4 hover:ring-blue-400 transition-all duration-300">
             <img src="images/f3.png" alt="Fauna 3" class="w-full h-48 object-cover rounded-t-2xl">
             <div class="p-6">
-              <h3 class="text-2xl font-semibold text-blue-600">Burung Cendrawasih</h3>
+              <h3 class="text-2xl font-semibold text-blue-600">Rusa Timor</h3>
               <p class="text-gray-600 mt-4">Burung Cendrawasih terkenal dengan keindahan warna bulunya dan menjadi
                 simbol
                 keanekaragaman hayati di Indonesia.</p>
@@ -570,34 +570,61 @@
   <!-- Akhirnya -->
   <!-- Akhirnya -->
   <!-- Akhirnya -->
-  <!-- Section Layanan -->
-  <section id="services" class="py-16 px-4 bg-gray-50">
-    <h2 class="text-3xl text-center font-bold mb-12">Layanan Kami</h2>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
-      <!-- Layanan 1 -->
-      <div
-        class="bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
-        <h3 class="text-2xl font-semibold mb-4">Desain Website</h3>
-        <p class="text-gray-700">Desain website modern yang user-friendly dan responsif untuk pengalaman
-          pengguna yang lebih baik.</p>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-8">
+    <div class="container mx-auto px-6 lg:px-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+        <!-- Kolom 1: About -->
+        <div>
+          <h3 class="text-xl font-semibold mb-4">Tentang Kami</h3>
+          <p class="text-sm text-gray-400">Kami adalah perusahaan yang berdedikasi untuk menyediakan layanan terbaik
+            dalam industri ini. Fokus kami adalah kepuasan pelanggan.</p>
+        </div>
+
+        <!-- Kolom 2: Link -->
+        <div>
+          <h3 class="text-xl font-semibold mb-4">Navigasi</h3>
+          <ul class="space-y-2 text-sm text-gray-400">
+            <li><a href="#" class="hover:text-white">Beranda</a></li>
+            <li><a href="#" class="hover:text-white">Layanan</a></li>
+            <li><a href="#" class="hover:text-white">Blog</a></li>
+            <li><a href="#" class="hover:text-white">Kontak</a></li>
+          </ul>
+        </div>
+
+        <!-- Kolom 3: Sosial Media -->
+        <div>
+          <h3 class="text-xl font-semibold mb-4">Ikuti Kami</h3>
+          <div class="flex space-x-4">
+            <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook"></i> Facebook</a>
+            <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i> Twitter</a>
+            <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i> Instagram</a>
+          </div>
+        </div>
+
+        <!-- Kolom 4: Logo dan Teks -->
+        <div class="flex flex-col items-center">
+          <!-- Ganti URL gambar sesuai dengan logo yang ingin digunakan -->
+          <img src="images/logonavbar.png" alt="Logo Perusahaan"
+            class="w-24 h-24 object-contain transition-all duration-300 transform hover:scale-110 mb-4">
+
+          <!-- Teks "Labuan Bajo" dengan font Charm -->
+          <h3
+            class="text-3xl font-extrabold text-sky-300 uppercase tracking-widest transform hover:scale-110 transition-all duration-300"
+            style="font-family: 'Charm', sans-serif;">
+            Labuan Bajo
+          </h3>
+        </div>
       </div>
-      <!-- Layanan 2 -->
-      <div
-        class="bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
-        <h3 class="text-2xl font-semibold mb-4">Pengembangan Aplikasi</h3>
-        <p class="text-gray-700">Aplikasi custom yang dapat membantu meningkatkan efisiensi dan produktivitas
-          bisnis Anda.</p>
-      </div>
-      <!-- Layanan 3 -->
-      <div
-        class="bg-white p-6 rounded-lg shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300">
-        <h3 class="text-2xl font-semibold mb-4">SEO & Digital Marketing</h3>
-        <p class="text-gray-700">Strategi SEO dan pemasaran digital untuk memastikan bisnis Anda mendapatkan
-          visibilitas online maksimal.</p>
+
+      <!-- Copyright Section -->
+      <div class="mt-8 text-center text-sm text-gray-400">
+        <p>&copy; 2025 LabuanBajo. All rights reserved.</p>
       </div>
     </div>
-  </section>
-
+  </footer>
+  <!-- end footer -->
   <!-- Js untuk nav transperent di home -->
   <!-- js untuk scrool smooth -->
   <script>
