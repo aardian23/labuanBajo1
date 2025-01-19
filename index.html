@@ -113,31 +113,33 @@
   <!-- Awal Home -->
   <!-- Awal Home -->
   <!-- Awal Home -->
-  <section class="parallax">
-    <!-- Parallax efek -->
-    <div class="video-background">
-      <video autoplay muted loop class="video-element">
-        <source src="images/WhatsApp Video 2025-01-08 at 20.39.28_9185d060.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-    </div>
-    <div class="overlay"></div>
-    <div class="text-center text-white px-6 md:px-12 z-10">
-      <h1 class="text-4xl md:text-5xl font-extrabold leading-tight mb-4 fadeInUp">Selamat Datang di Website Kami
+  <section class="relative bg-cover bg-center h-screen md:h-[90vh] sm:h-[80vh] animate-image-zoom"
+    style="background-image: url('image\ copy.jpg');">
+    <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+    <div
+      class="relative z-10 flex flex-col items-center justify-center h-full text-center text-white animate-fade-in px-4">
+      <h1 class="text-3xl sm:text-4xl md:text-6xl font-bold mb-4 drop-shadow-md animate-slide-in-down">
+        Selamat Datang di <span class="text-blue-400">Labuan Bajo</span>
       </h1>
-      <p class="text-lg md:text-2xl mb-6 fadeInUp">Kami membantu Anda mewujudkan solusi digital yang inovatif dan
-        efektif.</p>
-      <a href="#about"
-        class="bg-blue-800 text-white py-3 px-8 rounded-full text-xl hover:bg-indigo-500 transition duration-300 ease-in-out transform hover:scale-105 mt-4 fadeInUp">Pelajari
-        Lebih Lanjut</a>
+      <p class="text-base sm:text-lg md:text-2xl max-w-3xl mb-6 drop-shadow-md animate-slide-in-up">
+        Temukan keindahan alam yang luar biasa, pantai yang memukau, dan pengalaman tak terlupakan di surga Indonesia.
+      </p>
+      <div class="flex flex-wrap gap-4 justify-center">
+        <a href="#explore"
+          class="px-6 py-3 bg-blue-500 hover:bg-blue-600 rounded-lg text-white font-semibold shadow-lg transform hover:scale-105 transition-all duration-300">Jelajahi
+          Sekarang</a>
+        <a href="#about"
+          class="px-6 py-3 bg-transparent border border-white hover:bg-white hover:text-black rounded-lg font-semibold shadow-lg transform hover:-translate-y-1 transition-all duration-300">Pelajari
+          Lebih Lanjut</a>
+      </div>
+    </div>
+    <!-- Hiasan Dibawah Home warna -->
+    <div class="relative">
+      <div
+        class="absolute bottom-0 left-0 w-full h-10 bg-gradient-to-t from-blue-800 via-blue-600 to-transparent opacity-80 sm:h-8 md:h-12">
+      </div>
     </div>
   </section>
-  <!-- Hiasan Dibawah Home warna -->
-  <div class="relative">
-    <div
-      class="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-t from-blue-800 via-blue-600 to-transparent opacity-70">
-    </div>
-  </div>
   <!-- Akhir Home -->
   <!-- Akhir Home -->
   <!-- Akhir Home -->
@@ -596,6 +598,7 @@
     </div>
   </section>
 
+  <!-- Js untuk nav transperent di home -->
   <!-- js untuk scrool smooth -->
   <script>
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
