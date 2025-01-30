@@ -159,6 +159,9 @@
       dropdownIcon.classList.toggle("fa-chevron-up");
     });
 
+    // Sembunyikan dropdown menu mobile secara default
+    document.getElementById("dropdown-menu-mobile").style.display = "none";
+
     // Tambahkan event listener untuk tombol dropdown pada tampilan mobile
     const dropdownButtonMobile = document.getElementById("dropdown-button-mobile");
     const dropdownIconMobile = dropdownButtonMobile.querySelector("i");
@@ -166,7 +169,7 @@
     dropdownButtonMobile.addEventListener("click", function () {
       // Toggle class 'hidden' pada menu dropdown
       const dropdownMenuMobile = document.getElementById("dropdown-menu-mobile");
-      dropdownMenuMobile.classList.toggle("hidden");
+      dropdownMenuMobile.style.display = dropdownMenuMobile.style.display === "block" ? "none" : "block";
 
       // Toggle class 'fa-chevron-down' dan 'fa-chevron-up' pada icon dropdown
       dropdownIconMobile.classList.toggle("fa-chevron-down");
