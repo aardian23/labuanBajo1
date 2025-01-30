@@ -49,21 +49,34 @@
             Alam</a>
           <a href="#fauna"
             class="text-white hover:bg-indigo-700 px-3 py-2 rounded-md text-sm font-medium transition duration-300 ease-in-out">Fauna</a>
-          <a href="#tim"
-            class="text-white hover:bg-indigo-700 px-3 py-2 rounded-md text-sm font-medium transition duration-300 ease-in-out">Anggota</a>
 
-          <!-- Dropdown Menu -->
-          <div class="relative">
-            <div
-              class="absolute right-0 hidden bg-white text-indigo-600 shadow-lg rounded-md mt-2 space-y-2 w-40 px-4 py-2 group-hover:block">
-              <a href="#" class="block py-1">Blog</a>
-              <a href="#" class="block py-1">FAQs</a>
-              <a href="#" class="block py-1">Support</a>
+          <!-- Permainan Tradisional Dropdown -->
+          <div class="relative group">
+            <button id="dropdown-button"
+              class="text-white hover:bg-indigo-700 px-3 py-2 rounded-md text-sm font-medium transition duration-300 ease-in-out flex items-center">
+              Budaya
+              <i class="fas fa-chevron-down ml-2"></i> <!-- Icon dropdown -->
+            </button>
+            <!-- Dropdown Menu -->
+            <div id="dropdown-menu"
+              class="absolute left-0 hidden bg-white text-indigo-600 shadow-xl rounded-md mt-2 w-40 transform scale-95 group-hover:scale-100 transition-all duration-300 ease-in-out">
+              <a href="#permainan"
+                class="block py-2 px-4 hover:bg-blue-500 hover:text-white rounded-md transition duration-300 ease-in-out">Rangkuk
+                Aluk</a>
+              <a href="#permainan2"
+                class="block py-2 px-4 hover:bg-blue-500 hover:text-white rounded-md transition duration-300 ease-in-out">Permainan
+                2</a>
+              <a href="#permainan3"
+                class="block py-2 px-4 hover:bg-blue-500 hover:text-white rounded-md transition duration-300 ease-in-out">Permainan
+                3</a>
             </div>
           </div>
+
+          <a href="#tim"
+            class="text-white hover:bg-indigo-700 px-3 py-2 rounded-md text-sm font-medium transition duration-300 ease-in-out">Anggota</a>
         </div>
 
-        <!-- Hamburger Menu Button (Mobile) - KAnan -->
+        <!-- Hamburger Menu Button (Mobile) - Kanan -->
         <div class="absolute inset-y-0 right-0 flex items-center sm:hidden">
           <button id="mobile-menu-button"
             class="relative flex flex-col items-center justify-center space-y-1 p-2 text-white focus:outline-none">
@@ -79,7 +92,6 @@
     <div class="sm:hidden" id="mobile-menu" style="display: none;">
       <div
         class="px-6 py-8 space-y-6 bg-gradient-to-r from-blue-800 via-blue-600 to-blue-400 rounded-lg shadow-lg transform transition-all duration-500 ease-in-out">
-
         <!-- Menu Item -->
         <a href="#"
           class="text-white block px-6 py-3 rounded-md text-xl font-semibold transition duration-300 ease-in-out transform hover:bg-blue-700 hover:scale-105 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
@@ -101,6 +113,28 @@
           class="text-white block px-6 py-3 rounded-md text-xl font-semibold transition duration-300 ease-in-out transform hover:bg-blue-700 hover:scale-105 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
           Fauna LabuanBajo
         </a>
+
+        <!-- Permainan Tradisional Dropdown -->
+        <div class="relative group">
+          <button id="dropdown-button-mobile"
+            class="text-white block px-6 py-3 rounded-md text-xl font-semibold transition duration-300 ease-in-out flex items-center">
+            Budaya
+            <i class="fas fa-chevron-down ml-2"></i> <!-- Icon dropdown -->
+          </button>
+          <div id="dropdown-menu-mobile"
+            class="bg-white text-indigo-600 shadow-xl rounded-md mt-2 w-40 transform scale-95 translate-x-4 group-hover:scale-100 transition-all duration-300 ease-in-out">
+            <a href="#permainan"
+              class="block py-2 px-4 hover:bg-blue-500 hover:text-white rounded-md transition duration-300 ease-in-out">Rangkuk
+              Aluk</a>
+            <a href="#permainan2"
+              class="block py-2 px-4 hover:bg-blue-500 hover:text-white rounded-md transition duration-300 ease-in-out">Permainan
+              2</a>
+            <a href="#permainan3"
+              class="block py-2 px-4 hover:bg-blue-500 hover:text-white rounded-md transition duration-300 ease-in-out">Permainan
+              3</a>
+          </div>
+        </div>
+
         <a href="#tim"
           class="text-white block px-6 py-3 rounded-md text-xl font-semibold transition duration-300 ease-in-out transform hover:bg-blue-700 hover:scale-105 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
           Anggota
@@ -108,6 +142,37 @@
       </div>
     </div>
   </nav>
+
+  <script>
+    // Ambil tombol dropdown dan icon dropdown
+    const dropdownButton = document.getElementById("dropdown-button");
+    const dropdownIcon = dropdownButton.querySelector("i");
+
+    // Tambahkan event listener untuk tombol dropdown
+    dropdownButton.addEventListener("click", function () {
+      // Toggle class 'hidden' pada menu dropdown
+      const dropdownMenu = document.getElementById("dropdown-menu");
+      dropdownMenu.classList.toggle("hidden");
+
+      // Toggle class 'fa-chevron-down' dan 'fa-chevron-up' pada icon dropdown
+      dropdownIcon.classList.toggle("fa-chevron-down");
+      dropdownIcon.classList.toggle("fa-chevron-up");
+    });
+
+    // Tambahkan event listener untuk tombol dropdown pada tampilan mobile
+    const dropdownButtonMobile = document.getElementById("dropdown-button-mobile");
+    const dropdownIconMobile = dropdownButtonMobile.querySelector("i");
+
+    dropdownButtonMobile.addEventListener("click", function () {
+      // Toggle class 'hidden' pada menu dropdown
+      const dropdownMenuMobile = document.getElementById("dropdown-menu-mobile");
+      dropdownMenuMobile.classList.toggle("hidden");
+
+      // Toggle class 'fa-chevron-down' dan 'fa-chevron-up' pada icon dropdown
+      dropdownIconMobile.classList.toggle("fa-chevron-down");
+      dropdownIconMobile.classList.toggle("fa-chevron-up");
+    });
+  </script>
   <!-- Akhir Navbar -->
   <!-- Akhir Navbar -->
   <!-- Akhir Navbar -->
@@ -518,6 +583,56 @@
   <!-- Akhir section FAuna -->
   <!-- Akhir section FAuna -->
   <!-- Akhir section FAuna -->
+
+  <!-- awal section permainan -->
+  <!-- awal section permainan -->
+  <!-- awal section permainan -->
+  <section id="permainan">
+    <section id="permainan-labuan-bajo"
+      class="py-16 bg-gradient-to-r from-blue-800 via-blue-600 to-blue-400 relative overflow-hidden">
+      <!-- Lengkungan atas -->
+      <div class="absolute inset-x-0 -top-20 -z-10">
+        <svg class="w-full h-48" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 1440 320">
+          <path fill="white" d="M0,64L1440,128L1440,320L0,320Z"></path>
+        </svg>
+      </div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center text-white mb-12">
+          <h2 class="text-3xl font-bold sm:text-4xl">Permainan Tradisional Labuan Bajo</h2>
+          <p class="mt-4 text-lg sm:text-xl">Temui permainan tradisional yang kaya akan budaya dari Labuan Bajo.</p>
+        </div>
+
+        <!-- Card for a Single Traditional Game with Image Left and Description Right -->
+        <div
+          class="bg-white border-2 border-gray-800 rounded-2xl shadow-2xl overflow-hidden transform transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-2xl hover:translate-y-2 flex flex-col sm:flex-row">
+          <!-- Gambar di kiri -->
+          <img src="images/permainan1.png" alt="Permainan Tradisional Labuan Bajo"
+            class="w-full sm:w-1/2 h-72 object-cover rounded-t-2xl sm:rounded-l-2xl">
+
+          <!-- Deskripsi di kanan -->
+          <div class="p-6 sm:w-1/2">
+            <h3 class="text-2xl font-bold text-blue-800">Rangkuk Aluk</h3>
+            <p class="mt-4 text-gray-700"> Permainan ini berasal dari Manggarai, Flores.
+              Penjelasan
+              Rangkuk Alu adalah permainan dan tarian tradisional yang dimainkan di halaman kampung.
+              Permainan ini menggunakan alu, yaitu alat yang digunakan untuk menumbuk lesung.</p>
+            <a href="rangkukaluk.html"
+              class="mt-6 inline-block text-blue-800 font-semibold hover:text-blue-600 transition-all duration-300 ease-in-out">Pelajari
+              lebih lanjut &rarr;</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lengkungan bawah -->
+      <div class="absolute inset-x-0 bottom-0 -z-10">
+        <svg class="w-full h-48" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 1440 320">
+          <path fill="white" d="M0,256L1440,192L1440,0L0,0Z"></path>
+        </svg>
+      </div>
+    </section>
+  </section>
+  <!-- end -->
 
   <!-- Section Anggota -->
   <!-- Section Anggota -->
