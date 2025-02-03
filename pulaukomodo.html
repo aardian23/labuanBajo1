@@ -1,66 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pulau Komodo Labuan Bajo</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-gradient-to-b from-green-100 via-blue-100 to-yellow-50 min-h-screen font-sans">
-  <header class="bg-green-700 text-white py-6">
-    <div class="container mx-auto px-4 flex justify-between items-center">
-      <h1 class="text-4xl font-extrabold">Wisata Pulau Komodo</h1>
-      <nav>
-        <a href="index.html#wisata" class="text-white underline hover:text-green-300">Kembali ke Wisata</a>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pulau Komodo Labuan Bajo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gradient-to-b from-blue-50 to-green-100 min-h-screen flex flex-col items-center">
+    <!-- Smaller Sticky Navbar -->
+    <header class="bg-white shadow-md w-full py-2 px-6 sticky top-0 z-50">
+      <nav class="flex justify-between items-center">
+        <h1 class="text-2xl font-bold text-green-600">Pulau Komodo Labuan Bajo</h1>
+        <a href="index.html#wisata" class="text-green-600 font-medium hover:underline">Back to Wisata</a>
       </nav>
-    </div>
-  </header>
+    </header>
 
-  <main class="container mx-auto px-4 py-10">
-    <section class="text-center mb-12">
-      <h2 class="text-4xl font-bold text-green-800 mb-6">Mengapa Pulau Komodo Istimewa?</h2>
-      <p class="text-lg text-gray-800 leading-relaxed max-w-3xl mx-auto">Pulau Komodo adalah surga alami yang memikat hati para penjelajah dan pecinta alam. Sebagai habitat asli dari reptil terbesar di dunia, Komodo, pulau ini menyimpan keajaiban alam yang tidak bisa ditemukan di tempat lain. Pulau ini juga menawarkan perairan biru yang memikat dan keindahan bawah laut yang spektakuler.</p>
-    </section>
+    <main class="flex flex-col items-center my-8 px-4">
+      <section class="text-center max-w-3xl mb-12">
+        <p class="text-lg text-gray-700 mb-4">
+          Pulau Komodo merupakan salah satu destinasi unggulan Indonesia yang termasuk dalam Taman Nasional Komodo. Pulau ini terkenal sebagai habitat asli dari komodo, hewan purba yang dilindungi.
+        </p>
+        <p class="text-lg text-gray-700 mb-4">
+          Selain komodo, pulau ini memiliki pemandangan alam yang memukau dengan bukit-bukit savana dan pantai-pantai eksotis. Pengunjung dapat melakukan trekking untuk menjelajahi keindahan alamnya.
+        </p>
+        <p class="text-lg text-gray-700 mb-4">
+          Trekking di Pulau Komodo biasanya dibimbing oleh pemandu yang berpengalaman untuk menjaga keamanan wisatawan. Anda akan diajak menikmati panorama yang indah serta kesempatan melihat langsung kehidupan liar komodo.
+        </p>
+        <p class="text-lg text-gray-700">
+          Pulau Komodo adalah destinasi yang wajib dikunjungi bagi pecinta alam dan petualangan. Dengan kombinasi flora, fauna, dan pemandangan yang luar biasa, pengalaman di pulau ini akan menjadi kenangan tak terlupakan.
+        </p>
+      </section>
 
-    <section class="flex flex-col md:flex-row gap-8 mb-12">
-      <div class="bg-white shadow-lg rounded-lg p-8 w-full md:w-1/2">
-        <h3 class="text-2xl font-semibold text-green-700 mb-4">Hal yang Bisa Dilakukan</h3>
-        <ul class="list-disc list-inside text-gray-700 space-y-2">
-          <li>Menjelajahi habitat alami Komodo dengan pemandu profesional.</li>
-          <li>Melakukan trekking dengan berbagai tingkat kesulitan.</li>
-          <li>Menyelam atau snorkeling untuk melihat keindahan bawah laut.</li>
-          <li>Menikmati sunset yang memukau dari puncak bukit.</li>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <img src="img/wisata/komodo1.png" alt="Ini komodo" class="rounded-xl shadow-lg w-full h-60 object-cover hover:cursor-pointer hover:scale-105 transition-transform duration-300" onclick="alert('Ini komodo bukan kodomo')">
+        <img src="img/wisata/komodo2.png" alt="Ini Komodo" class="rounded-xl shadow-lg w-full h-60 object-cover hover:cursor-pointer hover:scale-105 transition-transform duration-300" onclick="alert('Ini komodo bukan kodomo')">
+        <img src="img/wisata/komodo3.png" alt="Ini Komodo" class="rounded-xl shadow-lg w-full h-60 object-cover hover:cursor-pointer hover:scale-105 transition-transform duration-300" onclick="alert('Ini komodo bukan kodomo')">
+        <img src="img/wisata/komodo4.png" alt="Ini Komodo" class="rounded-xl shadow-lg w-full h-60 object-cover hover:cursor-pointer hover:scale-105 transition-transform duration-300" onclick="alert('Ini komodo bukan kodomo')">
+        <img src="img/wisata/komodo5.png" alt="Ini komodo" class="rounded-xl shadow-lg w-full h-60 object-cover hover:cursor-pointer hover:scale-105 transition-transform duration-300" onclick="alert('Pulau Komodo View')">
+        <img src="img/wisata/komodo6.png" alt="Ini Komodo" class="rounded-xl shadow-lg w-full h-60 object-cover hover:cursor-pointer hover:scale-105 transition-transform duration-300" onclick="alert('Pulau Komodo View')">
+      </div>
+
+      <section class="max-w-3xl mt-12">
+        <h2 class="text-2xl font-bold text-green-600 mb-4">Tips Berkunjung ke Pulau Komodo</h2>
+        <ul class="list-disc list-inside text-gray-700">
+          <li>Gunakan pakaian dan sepatu yang nyaman untuk trekking.</li>
+          <li>Ikuti instruksi pemandu selama perjalanan untuk menjaga keamanan.</li>
+          <li>Bawa air minum yang cukup untuk mencegah dehidrasi.</li>
+          <li>Jangan mendekati komodo tanpa izin pemandu.</li>
+          <li>Siapkan kamera untuk menangkap momen indah di pulau ini.</li>
         </ul>
-      </div>
+      </section>
+    </main>
 
-      <div class="bg-white shadow-lg rounded-lg p-8 w-full md:w-1/2">
-        <h3 class="text-2xl font-semibold text-green-700 mb-4">Tips Berwisata</h3>
-        <ul class="list-disc list-inside text-gray-700 space-y-2">
-          <li>Kenakan sepatu yang nyaman untuk trekking.</li>
-          <li>Selalu dengarkan instruksi dari pemandu wisata.</li>
-          <li>Bawa air minum yang cukup untuk menghindari dehidrasi.</li>
-          <li>Jangan mendekati Komodo tanpa pengawasan pemandu.</li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="text-center mb-12">
-      <h3 class="text-3xl font-bold text-green-800 mb-6">Galeri Eksplorasi Pulau Komodo</h3>
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <img src="img/wisata/komodo1.png" alt="Komodo" class="rounded-lg shadow-md">
-        <img src="img/wisata/komodo2.png" alt="Pulau" class="rounded-lg shadow-md">
-        <img src="img/wisata/komodo3.png" alt="Trekking" class="rounded-lg shadow-md">
-        <img src="img/wisata/komodo4.png" alt="Sunset" class="rounded-lg shadow-md">
-        <img src="img/wisata/komodo5.png" alt="Bawah Laut" class="rounded-lg shadow-md">
-        <img src="img/wisata/komodo6.png" alt="Pantai" class="rounded-lg shadow-md">
-      </div>
-    </section>
-  </main>
-
-  <footer class="bg-green-700 text-white py-6 mt-10">
-    <div class="container mx-auto text-center">
-      <p>&copy; 2025 Pulau Komodo Adventures. ArdianRahman.</p>
-    </div>
-  </footer>
-</body>
+    <footer class="w-full bg-white mt-12 py-4 text-center">
+      <p class="text-gray-600">&copy; 2025 Ardian Rahman - Pulau Komodo Exploration</p>
+    </footer>
+  </body>
 </html>
