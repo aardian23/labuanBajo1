@@ -190,6 +190,16 @@
     <footer class="bg-white py-4 text-center shadow-lg">
         <p class="text-gray-600">&copy; 2025 Ardian Rahman - Tari Tiba Meka Labuan Bajo</p>
     </footer>
+    <script>
+        // Tambahkan event listener untuk tombol hamburger menu
+        const mobileMenuButton = document.getElementById("mobile-menu-button");
+        const mobileMenu = document.getElementById("mobile-menu");
+
+        mobileMenuButton.addEventListener("click", function () {
+            // Toggle class 'hidden' pada menu mobile
+            mobileMenu.style.display = mobileMenu.style.display === "block" ? "none" : "block";
+        });
+    </script>
 
     <script>
         let currentIndex = 0;

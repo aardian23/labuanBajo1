@@ -118,6 +118,17 @@
             </div>
         </div>
     </nav>
+    <script>
+        // Tambahkan event listener untuk tombol hamburger menu
+        // Tambahkan event listener untuk tombol hamburger menu
+        const mobileMenuButton = document.getElementById("mobile-menu-button");
+        const mobileMenu = document.getElementById("mobile-menu");
+
+        mobileMenuButton.addEventListener("click", function () {
+            // Toggle class 'hidden' pada menu mobile
+            mobileMenu.style.display = mobileMenu.style.display === "block" ? "none" : "block";
+        });
+    </script>
 
     <!-- Parallax Header Section -->
     <section class="parallax flex items-center justify-center text-white text-center bg-blue-800">
