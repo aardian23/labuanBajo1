@@ -37,7 +37,7 @@
 
         <!-- Menu Desktop -->
         <div class="hidden sm:flex sm:ml-6 space-x-4">
-          <a href="#"
+          <a href="#home"
             class="text-white hover:bg-indigo-700 px-3 py-2 rounded-md text-sm font-medium transition duration-300 ease-in-out">Home</a>
           <a href="#about"
             class="text-white hover:bg-indigo-700 px-3 py-2 rounded-md text-sm font-medium transition duration-300 ease-in-out">About</a>
@@ -73,7 +73,7 @@
           </div>
 
           <a href="#tim"
-            class="text-white hover:bg-indigo-700 px-3 py-2 rounded-md text-sm font-medium transition duration-300 ease-in-out">Anggota</a>
+            class="text-white hover:bg-indigo-700 px-3 py-2 rounded-md text-sm font-medium transition duration-300 ease-in-out">Kreator</a>
         </div>
 
         <!-- Hamburger Menu Button (Mobile) - Kanan -->
@@ -93,7 +93,7 @@
       <div
         class="px-6 py-8 space-y-6 bg-gradient-to-r from-blue-800 via-blue-600 to-blue-400 rounded-lg shadow-lg transform transition-all duration-500 ease-in-out">
         <!-- Menu Item -->
-        <a href="#"
+        <a href="#home"
           class="text-white block px-6 py-3 rounded-md text-xl font-semibold transition duration-300 ease-in-out transform hover:bg-blue-700 hover:scale-105 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
           Home
         </a>
@@ -137,7 +137,7 @@
 
         <a href="#tim"
           class="text-white block px-6 py-3 rounded-md text-xl font-semibold transition duration-300 ease-in-out transform hover:bg-blue-700 hover:scale-105 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
-          Anggota
+          Kreator
         </a>
       </div>
     </div>
@@ -204,7 +204,7 @@
   <!-- Awal Home -->
   <!-- Awal Home -->
   <!-- Awal Home -->
-  <section class="parallax">
+  <section class="parallax" id="home">
     <!-- Parallax efek -->
     <div class="video-background">
       <video autoplay muted loop class="video-element">
@@ -675,49 +675,88 @@
   <!-- Section Anggota -->
   <!-- Section Anggota -->
   <section id="tim">
-    <section class="py-16 bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600">
-      <div class="container mx-auto px-6">
-        <h2 class="text-4xl font-bold text-center text-white mb-12">Anggota Kelompok</h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-          <!-- Anggota 1 -->
-          <div
-            class="bg-white rounded-lg shadow-xl hover:shadow-2xl transform transition duration-500 hover:scale-105 hover:rotate-3 p-6 text-center">
-            <img
-              class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-gradient-to-r from-pink-500 via-red-500 to-yellow-500 transition duration-300 ease-in-out hover:shadow-lg hover:shadow-blue-500/50"
-              src="images/muka1.jpg" alt="Anggota 1">
-            <h3
-              class="text-2xl font-semibold text-gray-800 mt-4 transition duration-300 ease-in-out hover:text-blue-400">
-              Ardian Rahman
-            </h3>
-            <p class="text-gray-600 mt-2">Tidak semua lelaki itu Sma, banyak juga yang Smk</p>
-          </div>
-          <!-- Anggota 2 -->
-          <div
-            class="bg-white rounded-lg shadow-xl hover:shadow-2xl transform transition duration-500 hover:scale-105 hover:rotate-3 p-6 text-center">
-            <img
-              class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-gradient-to-r from-pink-500 via-red-500 to-yellow-500 transition duration-300 ease-in-out hover:shadow-lg hover:shadow-blue-500/50"
-              src="images/muka2.jpg" alt="Anggota 2">
-            <h3
-              class="text-2xl font-semibold text-gray-800 mt-4 transition duration-300 ease-in-out hover:text-blue-400">
-              Aurelia Ankabillah
-            </h3>
-            <p class="text-gray-600 mt-2">ubur ubur ikan lele, tetap ngoding walau malas lee.</p>
-          </div>
-          <!-- Anggota 3 -->
-          <div
-            class="bg-white rounded-lg shadow-xl hover:shadow-2xl transform transition duration-500 hover:scale-105 hover:rotate-3 p-6 text-center">
-            <img
-              class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-gradient-to-r from-pink-500 via-red-500 to-yellow-500 transition duration-300 ease-in-out hover:shadow-lg hover:shadow-blue-500/50"
-              src="images/muka3.jpg" alt="Anggota 3">
-            <h3
-              class="text-2xl font-semibold text-gray-800 mt-4 transition duration-300 ease-in-out hover:text-blue-400">
-              M. Zakirudin E.
-            </h3>
-            <p class="text-gray-600 mt-2">jadilah orang berguna dalam segala halhilhul.</p>
+    <section class="bg-gradient-to-r from-blue-50 via-blue-100 to-blue-200 py-16 px-6">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-3xl font-bold text-blue-800 mb-6">Created Web</h2>
+
+        <!-- Animated Border Container -->
+        <div class="relative inline-block p-[3px] rounded-2xl overflow-hidden">
+
+          <!-- Glow Layer -->
+          <div class="absolute inset-0 rounded-2xl border-gradient-blue blur-lg opacity-80"></div>
+
+          <!-- Main Animated Border -->
+          <div class="absolute inset-0 rounded-2xl border-gradient-blue"></div>
+
+          <!-- Profile Card -->
+          <div class="relative bg-white/80 backdrop-blur-md rounded-2xl shadow-lg p-8 max-w-xl mx-auto z-10">
+            <!-- Profile Photo -->
+            <img src="images/muka2.jpg" alt="Ardian Rahman"
+              class="w-32 h-32 rounded-full mx-auto border-4 border-blue-400 shadow-lg">
+
+            <!-- Name -->
+            <h3 class="text-2xl font-semibold text-blue-900 mt-4">Ardian Rahman</h3>
+
+            <!-- Short Bio -->
+            <p class="text-blue-700 mt-2 text-sm">
+              Seorang web developer yang berfokus pada desain modern, responsif, dan interaktif menggunakan teknologi
+              terkini. Memiliki passion dalam membangun web portfolio yang unik dan profesional.
+            </p>
+
+            <!-- Visit Portfolio Button -->
+            <div class="mt-6">
+              <a href="https://aardian.my.id/" target="_blank"
+                class="inline-flex items-center gap-2 px-5 py-2 bg-blue-600 text-white rounded-full shadow-md hover:bg-blue-700 hover:shadow-blue-400 transition-all duration-300">
+                <!-- Icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                  stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+                Visit Portfolio
+              </a>
+            </div>
           </div>
         </div>
       </div>
     </section>
+
+    <style>
+      .border-gradient-blue {
+        background: conic-gradient(from 0deg,
+            #1e3a8a,
+            #2563eb,
+            #3b82f6,
+            #60a5fa,
+            #3b82f6,
+            #2563eb,
+            #1e3a8a);
+        background-size: 200% 200%;
+        animation: spin 6s linear infinite, pulseGlow 3s ease-in-out infinite;
+        z-index: 0;
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      @keyframes pulseGlow {
+
+        0%,
+        100% {
+          filter: brightness(1) blur(0px);
+        }
+
+        50% {
+          filter: brightness(1.4) blur(3px);
+        }
+      }
+    </style>
   </section>
   <!-- Akhirnya -->
   <!-- Akhirnya -->
